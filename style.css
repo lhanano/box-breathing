@@ -1,0 +1,196 @@
+html {
+    background-color: rgb(255, 247, 230);
+    background-size: cover;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-box {
+    position: relative;
+    height: 540px;
+    width: 540px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left > .dash, .right > .dash {
+    height: 60px;
+    width: 15px;
+    background-color: rgb(136, 93, 255)
+}
+
+.top > .dash, .bottom > .dash {
+    height: 15px;
+    width: 60px;
+    background-color: rgb(136, 93, 255)
+}
+
+.left, .right {
+    position: absolute;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top, .bottom {
+    position: absolute;
+    width: 440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+    left: 0px;
+    flex-direction: column-reverse;
+}
+
+.right {
+    right: 0px;
+}
+
+.top {
+    top: 0px;
+}
+
+.bottom {
+    bottom: 0px;
+    flex-direction: row-reverse;
+}
+
+.inner-box {
+    height: 400px;
+    width: 400px;
+    border: 12px solid pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: boxSize 16s ease-in-out infinite forwards;
+}
+
+@keyframes boxSize {
+    0% {transform: scale(1, 1);}
+    25% {transform: scale(1.09, 1.09);}
+    50% {transform: scale(1.09, 1.09);}
+    75% {transform: scale(1, 1);}
+    100% {transform: scale(1, 1);}
+}
+
+.message {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 40px;
+    color: rgb(85, 85, 85);
+}
+
+.message::after {
+    animation: changeMessage 16s ease-in-out infinite forwards;
+    content: "";
+}
+
+@keyframes changeMessage {
+    0% {content: "breathe in"; opacity: 1;}
+    21% {content: "breathe in"; opacity: 1;}
+    25% {opacity: 0;}
+    29% {content: "hold"; opacity: 1;}
+    46% {content: "hold";}
+    50% {opacity: 0;}
+    54% {content: "breathe out"; opacity: 1;}
+    71% {content: "breathe out";}
+    75% {opacity: 0;}
+    79% {content: "hold"; opacity: 1;}
+    96% {content: "hold";}
+    100% {opacity: 0;}
+}
+
+.dash {
+    animation: dash 48s linear infinite forwards;
+}
+
+@keyframes dash {
+    0% {background-color: rgb(136, 93, 255)}
+    2% {background-color: rgb(53, 181, 255);}
+    33% {background-color: rgb(53, 181, 255);}
+    35% {background-color: rgb(118, 255, 209);}
+    66% {background-color: rgb(118, 255, 209);}
+    68% {background-color: rgb(136, 93, 255);}
+    100% {background-color: rgb(136, 93, 255);}
+}
+
+.dash2 {
+    animation-delay: 1s;
+}
+
+.dash3 {
+    animation-delay: 2s;
+}
+
+.dash4 {
+    animation-delay: 3s;
+}
+
+.dash5 {
+    animation-delay: 4s;
+}
+
+.dash6 {
+    animation-delay: 5s;
+}
+
+.dash7 {
+    animation-delay: 6s;
+}
+
+.dash8 {
+    animation-delay: 7s;
+}
+
+.dash9 {
+    animation-delay: 8s;
+}
+
+.dash10 {
+    animation-delay: 9s;
+}
+
+.dash11 {
+    animation-delay: 10s;
+}
+
+.dash12 {
+    animation-delay: 11s;
+}
+
+.dash13 {
+    animation-delay: 12s;
+}
+
+.dash14 {
+    animation-delay: 13s;
+}
+
+.dash15 {
+    animation-delay: 14s;
+}
+
+.dash16 {
+    animation-delay: 15s;
+}
+
+.audio {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
